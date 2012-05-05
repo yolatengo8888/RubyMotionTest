@@ -41,7 +41,7 @@ class DrawViewController < UIViewController
   
   def show_pen_state(button)    
     @penStateViewPopover.presentPopoverFromRect(
-      @btnPen.bounds, inView:button, permittedArrowDirections:UIPopoverArrowDirectionAny, animated:true)
+      button.bounds, inView:button, permittedArrowDirections:UIPopoverArrowDirectionAny, animated:true)
   end
 
   def get_point(touches)
