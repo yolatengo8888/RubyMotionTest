@@ -1,10 +1,10 @@
 class DrawViewController < UIViewController
   def loadView
     @drawItemManager = DrawItemManager.new
+    
     drawBoardView = DrawBoardView.alloc.init
     drawBoardView.backgroundColor = UIColor.whiteColor
     drawBoardView.drawItemManager = @drawItemManager
-
     self.view = drawBoardView
   end
 
