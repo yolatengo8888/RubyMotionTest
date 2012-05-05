@@ -15,7 +15,7 @@ class DrawViewController < UIViewController
     buttonImage = UIImage.imageNamed('pen-48.png')
     
     @btnPen = UIButton.buttonWithType(UIButtonTypeRoundedRect)
-    @btnPen.addTarget(self, action:'show_pen_state:', forControlEvents:UIControlEventTouchUpInside)
+    @btnPen.addTarget(self, action:'show_palette:', forControlEvents:UIControlEventTouchUpInside)
     @btnPen.frame = CGRectMake(
       (screenSize.width  - buttonImage.size.width) / 2, 
       screenSize.height - buttonImage.size.height - 8, 
@@ -39,7 +39,7 @@ class DrawViewController < UIViewController
     @btnPen.layer.setBorderColor(@pen.color)
   end
   
-  def show_pen_state(button)    
+  def show_palette(button)    
     @penStateViewPopover.presentPopoverFromRect(
       button.bounds, inView:button, permittedArrowDirections:UIPopoverArrowDirectionAny, animated:true)
   end
